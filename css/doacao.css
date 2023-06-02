@@ -1,0 +1,139 @@
+.doacao-section {
+    display: grid;
+    width: 100%;
+    background-color: white;
+    padding: 45px 0px;
+    height: 1fr;
+}
+
+
+.significado-doacao{
+    padding: 55px 75px;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-doacao {
+    color: rgba(121, 216, 101, 1);
+    font-size: 2.8rem;
+}
+
+.descricao-doacao {
+    display: flex;
+    color: black;
+    max-width: 85%;
+    font-size: 1.5rem;
+}
+
+.imagem {
+    display: flex;
+    height: 550px;
+    width: 100%;
+    background-image: url(/img/doacao.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 95px 45vh;
+    gap: 140px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(205, 205, 205, 1);
+    gap: 50px;
+    height: 345px;
+    width: 355px;
+    position: relative;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.descricao-plano {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 55px;
+    gap: 40px;
+}
+
+#checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.buttom-doar {
+    display: flex;
+    bottom: -45px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    width: 235px;
+    height: 85px;
+    background-color: rgba(89, 186, 73, 1);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.descricao-plano h3 {
+    color: rgba(89, 186, 73, 1);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.descricao-plano p {
+    color: black;
+    font-size: 1.2rem;
+}
+
+.descricao-plano .valor {
+    font-size: 1.7rem;
+    color: rgba(89, 186, 73, 1);
+    font-weight: bold;
+}
+
+.acordo {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 230px;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.acordo a {
+    font-weight: bold;
+    color: rgba(31, 94, 23, 1);
+}
+
+#valor-desejado {
+    font-size: 3.1rem;
+}
+
+#privacidade {
+    gap: 30px;
+    display: flex;
+}
+
+#erro-messagem {
+    font-size: .8rem;
+    color: #ff2e2e;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}

@@ -1,0 +1,127 @@
+.imagem-resultado {
+    background-image: url(/img/resultado.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 700px;
+    display: none;
+    flex-direction: column;
+    padding: 45px;
+    gap: 30px;
+}
+
+.consumo-resultado {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #59BA49;
+}
+
+.paragrafo-resultado {
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 68vh;
+    color: #FFFFFF;
+}
+
+table {
+    padding: 15px 0px;
+    text-align: left;
+    color: white;
+}
+
+thead {
+    font-size: 1.5rem;
+    color: #59BA49;
+}
+
+th {
+    padding: 8px 0px;
+}
+
+td {
+    font-size: 1.1rem;
+    padding: 18px 0px;
+    border-top: 2px solid #ddd;
+}
+
+.compensar-resultado {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+button {
+    background-color: rgba(89, 186, 73, 1);
+    border: none;
+    height: 85px;
+    width: 320px;
+    font-weight: 300;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.td-total {
+    color: #59BA49;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.td-emissao {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+@media (max-width: 960px) {
+
+    .imagem-resultado {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    .paragrafo-resultado {
+        width: 90%;
+    }
+    .enviar-resultado {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-resultado {
+        padding: 15px 10px;
+        height: 590px;
+        gap: 15px;
+    }
+
+    .consumo-resultado {
+        font-size: 1rem;
+    }
+
+    .paragrafo-resultado {
+        font-size: .8rem;
+    }
+
+    .descricao-form-resultado {
+        font-size: .9rem;
+    }
+    
+    .compensar-resultado {
+        font-size: .9rem;
+    }   
+
+
+    .imagem-resultado button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}

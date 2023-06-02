@@ -1,0 +1,36 @@
+@media (max-width: 960px) {
+    
+    .container-calculo {
+        padding: 50px 0px;
+    }
+
+    .linha-etapa {
+        width: 100%;
+    }
+
+    .imagem-eletrica {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    .form-control-eletrica input{
+        width: 100%;
+    }
+
+    .paragrafo-eletrica {
+        width: 90%;
+    }
+    .enviar-eletrica {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+       
+    footer {
+        flex-direction: column;
+        height: 300px;
+        padding: 25px 0px;
+        gap: 25px;
+    }
+}

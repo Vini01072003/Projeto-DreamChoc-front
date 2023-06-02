@@ -1,0 +1,37 @@
+/*MOBILE */
+
+@media (max-width: 640px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .menu {
+        font-size: 1rem;
+        width: 120px;
+    }
+    select {
+        font-size: 1rem;
+        width: 90px;
+    }
+
+    .significado-doacao {
+        padding: 40px;
+    }
+
+    .significado-doacao .title-doacao {
+        max-width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .descricao-doacao {
+        font-size: .8rem;
+        max-width: 100%;
+    }
+
+    .container-card {
+        padding: 50px 0px;
+    }
+
+
+}

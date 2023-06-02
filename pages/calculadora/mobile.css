@@ -1,0 +1,59 @@
+@media (max-width: 640px) {
+
+    .significado-calculadora {
+
+        padding: 55px 45px;
+    }
+
+    .title-calculadora {
+        font-size: 1.7rem;
+    }
+
+    .descricao-calculadora h2 {
+        font-size: 1.2rem;
+    }
+
+    .descricao-calculadora p {
+        font-size: .9rem;
+    }
+
+    .imagem-eletrica {
+        height: 590px;
+    }
+
+    .circulo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .etapa p {
+        font-size: .5rem;
+    }
+
+    .linha-etapa {
+        justify-content: space-around;
+    }
+
+    .container-etapa {
+        padding: 50px;
+    }
+
+    .consumo-eletrica {
+        font-size: 1rem;
+    }
+
+    .paragrafo-eletrica {
+        font-size: .8rem;
+    }
+
+    .descricao-form-eletrica {
+        font-size: .9rem;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 300px;
+        padding: 25px 0px;
+        gap: 25px;
+    }
+}

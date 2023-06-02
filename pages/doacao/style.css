@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px white
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #59BA49;
+    border-radius: 50px;
+}
+
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 150px;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    display: grid;
+    background-color: white;
+}
+
+.significado {
+    padding: 55px 75px;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    color: rgba(121, 216, 101, 1);
+    font-size: 2.8rem;
+}
+
+.descricao {
+    display: flex;
+    color: black;
+    max-width: 85%;
+    font-size: 1.5rem;
+}
+
+.imagem {
+    display: flex;
+    height: 550px;
+    width: 100%;
+    background-image: url(/img/doacao.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 95px 45vh;
+    gap: 140px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(205, 205, 205, 1);
+    gap: 50px;
+    height: 345px;
+    width: 355px;
+    position: relative;
+    transition: all .2s ease-out;
+    transition: all .3s ease-out;
+}
+
+.descricao-plano {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 55px;
+    gap: 40px;
+}
+
+.buttom-doar {
+    display: flex;
+    bottom: -45px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: white;
+    width: 235px;
+    height: 85px;
+    background-color: rgba(89, 186, 73, 1);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.descricao-plano h3 {
+    color: rgba(89, 186, 73, 1);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.descricao-plano p {
+    font-size: 1.2rem;
+}
+
+.descricao-plano .valor {
+    font-size: 1.7rem;
+    color: rgba(89, 186, 73, 1);
+    font-weight: bold;
+}
+
+.acordo {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 230px;
+    font-size: 1.1rem;
+}
+
+.acordo a {
+    font-weight: bold;
+    color: rgba(31, 94, 23, 1);
+}
+
+#valor-desejado {
+    font-size: 3.1rem;
+}
+
+#privacidade {
+    gap: 30px;
+    display: flex;
+}
+
+#erro-messagem {
+    font-size: .8rem;
+    color: #ff2e2e;
+}
+
+.card:hover {
+    transform: scale(1.06);
+}

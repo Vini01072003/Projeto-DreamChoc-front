@@ -1,0 +1,393 @@
+.calculadora-section {
+    display: grid;
+    width: 100%;
+    background-color: white;
+    padding: 45px 0px;
+    height: 1fr;
+}
+
+.section-calculo {
+    grid-area: content;
+    height: 1fr;
+
+}
+
+.significado-calculadora{
+    color: black;
+    padding: 55px 75px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.significado-calculadora span{
+    text-align: end;
+    font-size: 1.6rem;
+    padding-bottom: .4vh;
+}
+
+.title-calculadora {
+    color: rgba(24, 127, 15, 1);
+    font-size: 2.8rem;
+    font-weight: 500;
+    align-items: end;
+}
+
+.descricao-calculadora{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.descricao-calculadora h2 {
+    color: rgba(24, 127, 15, 1);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.descricao-calculadora p {
+    font-size: 1.4rem;
+}
+
+.imagem {
+    width: 100%;
+    height: 300px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/calculadora.png);
+}
+
+.container-etapa {
+    padding: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha-etapa {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000;
+    height: 4px;
+    width: 85%;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.circulo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 1);
+    transition: all 300ms ease-in-out;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.container-calculo {
+    height: 1fr;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invisivel {
+    display: none;
+}
+
+.circulo-verde {
+    height: 65px;
+    width: 65px;
+    background-color: rgba(89, 186, 73, 1);
+    transform: scale(1); 
+}
+
+
+.escrita {   
+    transition: all 300ms ease-in-out;
+    font-weight: bold;
+    color: rgba(217, 217, 217, 1);
+}
+
+.escrita-etapa {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgba(89, 186, 73, 1);
+    transform: scale(1.3); 
+}
+
+/* Eletrica */
+@media (max-width: 960px) {
+    
+    .container-calculo {
+        padding: 50px 0px;
+    }
+
+    .linha-etapa {
+        width: 100%;
+    }
+
+    .imagem-eletrica {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    .form-control-eletrica input{
+        width: 100%;
+    }
+
+    .paragrafo-eletrica {
+        width: 90%;
+    }
+    .enviar-eletrica {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+       
+    footer {
+        flex-direction: column;
+        height: 300px;
+        padding: 25px 0px;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .significado-calculadora {
+
+        padding: 55px 45px;
+    }
+
+    .title-calculadora {
+        font-size: 1.7rem;
+    }
+
+    .descricao-calculadora h2 {
+        font-size: 1.2rem;
+    }
+
+    .descricao-calculadora p {
+        font-size: .9rem;
+    }
+
+    .imagem-eletrica {
+        height: 590px;
+    }
+
+    .circulo {
+        height: 25px;
+        width: 25px;
+    }
+
+    .etapa p {
+        font-size: .5rem;
+    }
+
+    .linha-etapa {
+        justify-content: space-around;
+    }
+
+    .container-etapa {
+        padding: 50px;
+    }
+
+    .consumo-eletrica {
+        font-size: 1rem;
+    }
+
+    .paragrafo-eletrica {
+        font-size: .8rem;
+    }
+
+    .descricao-form-eletrica {
+        font-size: .9rem;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 300px;
+        padding: 25px 0px;
+        gap: 25px;
+    }
+}
+
+/* Gas */
+@media (max-width: 960px) {
+
+    .imagem-gas {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    
+    .form-control-gas input{
+        width: 100%;
+    }
+
+    .paragrafo-gas {
+        width: 90%;
+    }
+    .enviar-gas {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-gas {
+        height: 590px;
+    }
+
+    .consumo-gas {
+        font-size: 1rem;
+    }
+
+    .paragrafo-gas {
+        font-size: .8rem;
+    }
+
+    .descricao-form-gas {
+        font-size: .9rem;
+    }
+
+    .form-control-gas input{
+        font-size: .65rem;
+    }
+
+    
+    .enviar-gas button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}
+
+/* TRANSPORTE */
+@media (max-width: 960px) {
+
+    .imagem-transporte {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    
+    .form-control-transporte input{
+        width: 100%;
+    }
+
+    .paragrafo-transporte {
+        width: 90%;
+    }
+    .enviar-transporte {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-transporte {
+        height: 590px;
+    }
+
+    .consumo-transporte {
+        font-size: 1rem;
+    }
+
+    .paragrafo-transporte {
+        font-size: .8rem;
+    }
+
+    .descricao-form-transporte {
+        font-size: .9rem;
+    }
+
+    .form-control-transporte input{
+        font-size: 1rem;
+    }
+
+    
+    .enviar-transporte button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}
+
+/* Resultado */
+@media (max-width: 960px) {
+
+    .imagem-resultado {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    .paragrafo-resultado {
+        width: 90%;
+    }
+    .enviar-resultado {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-resultado {
+        padding: 15px 10px;
+        height: 590px;
+        gap: 15px;
+    }
+
+    .consumo-resultado {
+        font-size: 1rem;
+    }
+
+    .paragrafo-resultado {
+        font-size: .8rem;
+    }
+
+    .descricao-form-resultado {
+        font-size: .9rem;
+    }
+    
+    .compensar-resultado {
+        font-size: .9rem;
+    }   
+
+
+    .imagem-resultado button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}

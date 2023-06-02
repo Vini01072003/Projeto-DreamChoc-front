@@ -1,0 +1,131 @@
+.imagem-transporte {
+    background-image: url(/img/transporte.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 470px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+
+}
+
+.title-transporte {
+    display: flex;
+    position: relative;
+}
+
+.consumo-transporte {
+    font-weight: bold;
+    font-size: 30px;  
+    color: #59BA49;
+}
+
+.paragrafo-transporte{
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 68vh;
+    color: #FFFFFF;
+}
+
+.form-control-transporte{
+    display: grid;
+    gap: 3vh;
+}
+
+ button {
+    background-color: rgba(89, 186, 73, 1);
+    border: none;
+    height: 70px;
+    width: 310px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.enviar-transporte {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 100vh;
+} 
+
+.descricao-form-transporte{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 70%;
+    height: 55px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input:disabled{
+    border: none;
+    background-color: #ffff;
+}
+
+
+@media (max-width: 960px) {
+
+    .imagem-transporte {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    
+    .form-control-transporte input{
+        width: 100%;
+    }
+
+    .paragrafo-transporte {
+        width: 90%;
+    }
+    .enviar-transporte {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-transporte {
+        height: 590px;
+    }
+
+    .consumo-transporte {
+        font-size: 1rem;
+    }
+
+    .paragrafo-transporte {
+        font-size: .8rem;
+    }
+
+    .descricao-form-transporte {
+        font-size: .9rem;
+    }
+
+    .form-control-transporte input{
+        font-size: 1rem;
+    }
+
+    
+    .enviar-transporte button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}

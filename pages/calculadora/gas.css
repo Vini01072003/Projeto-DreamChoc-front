@@ -1,0 +1,130 @@
+.imagem-gas {
+    background-image: url(/img/gas.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 470px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+.title-gas {
+    display: flex;
+    position: relative;
+}
+
+.consumo-gas {
+    font-weight: bold;
+    font-size: 30px;  
+    color: #59BA49;
+}
+
+.paragrafo-gas{
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+    width: 68vh;
+    color: #FFFFFF;
+}
+
+.form-control-gas{
+    display: grid;
+    gap: 3vh;
+}
+
+ button {
+    background-color: rgba(89, 186, 73, 1);
+    border: none;
+    height: 70px;
+    width: 310px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+
+}
+
+.enviar-gas {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 100vh;
+} 
+
+.descricao-form-gas{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+input {
+    width: 70%;
+    height: 55px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input:disabled{
+    border: none;
+    background-color: #ffff;
+}
+
+@media (max-width: 960px) {
+
+    .imagem-gas {
+        height: 650px;
+        padding: 25px 50px;
+    }
+
+    
+    .form-control-gas input{
+        width: 100%;
+    }
+
+    .paragrafo-gas {
+        width: 90%;
+    }
+    .enviar-gas {
+        align-items: start;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .imagem-gas {
+        height: 590px;
+    }
+
+    .consumo-gas {
+        font-size: 1rem;
+    }
+
+    .paragrafo-gas {
+        font-size: .8rem;
+    }
+
+    .descricao-form-gas {
+        font-size: .9rem;
+    }
+
+    .form-control-gas input{
+        font-size: .65rem;
+    }
+
+    
+    .enviar-gas button {
+        width: 200px;
+        font-size: .8rem;
+    }
+    
+}

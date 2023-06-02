@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9fa01aebbd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/pages/calculadora/tablet.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="transporte.css">
+    <link rel="stylesheet" href="gas.css">
+    <link rel="stylesheet" href="eletricidade.css">
+    <link rel="stylesheet" href="resultado.css">
+    <script src="/pages/calculadora/input.js"></script>
+    <script src="etapa.js" defer type="module"></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    
+    <section>
+
+        <div class="significado">
+            <div class="title">Calculadora de CO <span>2</span></div>
+            <div class="descricao">
+                <h2>O que é pegada de carbono?</h2>
+                <p>
+                    Atividades do dia a dia emitem, direta ou indiretamente, gases causadores das mudanças climáticas.
+                    Use a calculadora para descobrir sua pegada de carbono e quantas árvores precisa plantar para
+                    compensar essas emissões!
+                </p>
+            </div>
+        </div>
+
+        <div class="imagem"></div>
+
+
+        <div class="container-etapa">
+
+            <div class="linha-etapa">
+
+                <div class="etapa eletrica">
+                    <div class="circulo circulo-verde"></div>
+                    <p class="escrita escrita-etapa">Casa-eletricidade</p>
+                </div>
+
+                <div class="etapa gas">
+                    <div class="circulo"></div>
+                    <p class="escrita">Casa-gás</p>
+                </div>
+
+                <div class="etapa transporte">
+                    <div class="circulo"></div>
+                    <p class="escrita">Transporte</p>
+                </div>
+
+                <div class="etapa resultado">
+                    <div class="circulo"></div>
+                    <p class="escrita">Resultado</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container-calculo">
+
+            <!-- Calculo do consumo de Energia -->
+            <div class="imagem-eletrica">
+                <div class="title-eletrica">
+                    <h1 class="consumo-eletrica">Consumo de eletricidade</h1>
+                </div>
+                <p class="paragrafo-eletrica">Insira seu consumo MENSAL de energia. Veja onde encontrar essa informação
+                    na sua conta de energia elétrica</p>
+                <form class="form-control-eletrica">
+                    <input type="text" disabled placeholder="R$/mês" />
+                    <input type="text" id="valor-eletrica"
+                        oninput="formatarValorReais(); calcularEmissoesEletricidade(); formatarResultado()"
+                        maxlength="11" placeholder="Digite o valor da conta">
+                </form>
+                <div class="enviar-eletrica">
+                    <button id="button-eletrica" type="submit">PRÓXIMO PASSO</button>
+                    <div class="descricao-form-eletrica">
+                        <p class="descricao_emissoes-eletrica">Emissões mensais (kg CO²e): <span
+                                id="emissoes_mensais-eletricidade"></span></p>
+                        <p class="descricao_emissoes-eletrica">Emissões anuais (kg CO²e): <span
+                                id="emissoes_anuais-eletricidade"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculo do consumo de Gás -->
+            <div class="imagem-gas">
+                <div class="title-gas">
+                    <h1 class="consumo-gas">Consumo de gás</h1>
+                </div>
+                <p class="paragrafo-gas">Insira seu consumo MENSAL de gás, inserir a quantidade de botijões de gás que
+                    consome em sua casa.</p>
+                <form class="form-control-gas">
+                    <input type="text" disabled placeholder="Quantidade de botijões/mês" />
+                    <input type="text" id="valor-gas"
+                        oninput="calcularEmissaoGases(); formatarInputGas(); formatarResultado()" maxlength="2"
+                        placeholder="Total de botijões por mês">
+                </form>
+                <div class="enviar-gas">
+                    <button id="button-gas" type="submit">PRÓXIMO PASSO</button>
+                    <div class="descricao-form-gas">
+                        <p class="descricao_emissoes-gas">Emissões mensais (kg CO²e): <span
+                                id="emissoes_mensais_gases"></span></p>
+                        <p class="descricao_emissoes-gas">Emissões anuais (kg CO²e): <span
+                                id="emissoes_anuais_gases"></span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calculo do consumo de quilometragem -->
+            <div class="imagem-transporte">
+                <div class="title-transporte">
+                    <h1 class="consumo-transporte">Transporte</h1>
+                </div>
+                <p class="paragrafo-transporte">Neste item, você preencherá as informações relacionadas ao seu
+                    transporte individual, no seu dia a dia.</p>
+                <form class="form-control-transporte">
+                    <input type="text" disabled placeholder="km/mês" />
+                    <input type="text" id="valor-transporte"
+                        oninput="calcularEmissaoTransporte(); formatarInputTransporte(); formatarResultado()"
+                        maxlength="11" placeholder="Total de km rodados no mês">
+                </form>
+                <div class="enviar-transporte">
+                    <button id="button-transporte" type="submit">PRÓXIMO PASSO</button>
+                    <div class="descricao-form-transporte">
+                        <p class="descricao_emissoes-transporte">Emissões mensais (kg CO²e): <span
+                                id="emissoes_mensais_transporte"></span></p>
+                        <p class="descricao_emissoes-transporte">Emissões anuais (kg CO²e): <span
+                                id="emissoes_anuais_transporte"></span></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Resultado do Calculo -->
+            <div class="imagem-resultado">
+
+                <div class="title-resultado">
+                    <h1 class="consumo-resultado">Resultado</h1>
+                </div>
+
+                <p class="paragrafo-resultado">Resumo de suas emissões de gases de efeito estufa anuais</p>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Fonte</th>
+                            <th>Emissões (tCO²e)</th>
+                            <th>%</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Eletricidade</td>
+                            <td id="qtd-emissao-eletrica">0</td>
+                            <td id="porcentagem-emissao-eletrica">0%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Gás</td>
+                            <td id="qtd-emissao-gas">0</td>
+                            <td id="porcentagem-emissao-gas">0%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transporte</td>
+                            <td id="qtd-emissao-transporte">0</td>
+                            <td id="porcentagem-emissao-tranporte">0%</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-total">TOTAL</td>
+                            <td id="emissao-total" class="td-emissao">0</td>
+                            <td id="porcentagem-emissao-total" class="td-emissao">0%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <p class="compensar-resultado">Para compensar suas emissões é preciso restaurar <span
+                        id="metro-quadrado">0</span> m² de floresta.
+                    Isso equivale a <span id="total-arvores">0</span> árvores.</p>
+
+                <button id="button-resultado" type="submit">COMPENSAR R$(<span
+                        id="valor-compensar">00</span>,00)</button>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="container-contato">
+
+            <div class="contato">
+                <i class="fa-solid fa-phone"></i><span>(11) 4774-4700</span>
+            </div>
+
+            <div class="contato">
+                <i class="fa-solid fa-envelope"></i><span>globalwarming@gmail.com</span>
+            </div>
+
+            <div class="contato">
+                <i class="fa-solid fa-location-dot"></i><span>Rua tcc, 211, Centro, Jandira</span>
+            </div>
+        </div>
+
+        <div class="container-copy">
+            <img src="/img/onda-verde.png" alt="">
+        </div>
+
+        <div class="container-social">
+
+            <div class="social">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <div class="social">
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+
+            <div class="social">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div class="social">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px white
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #59BA49;
+    border-radius: 50px;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 150px;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    display: grid;
+}
+
+.significado {
+    padding: 55px 75px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.significado span{
+    text-align: end;
+    font-size: 1.6rem;
+    padding-bottom: .4vh;
+}
+
+.title {
+    color: rgba(24, 127, 15, 1);
+    font-size: 2.8rem;
+    font-weight: 500;
+    align-items: end;
+}
+
+.descrica-calculadora{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%;
+}
+
+.descricao h2 {
+    color: rgba(24, 127, 15, 1);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.descricao p {
+    font-size: 1.4rem;
+}
+
+.imagem {
+    width: 100%;
+    height: 300px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/calculadora.png);
+}
+
+.container-etapa {
+    padding: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha-etapa {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000;
+    height: 4px;
+    width: 85%;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.circulo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(217, 217, 217, 1);
+    transition: all 300ms ease-in-out;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.container-calculo {
+    height: 1fr;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.invisivel {
+    display: none;
+}
+
+.circulo-verde {
+    height: 65px;
+    width: 65px;
+    background-color: rgba(89, 186, 73, 1);
+    transform: scale(1); 
+}
+
+
+.escrita {   
+    transition: all 300ms ease-in-out;
+    font-weight: bold;
+    color: rgba(217, 217, 217, 1);
+}
+
+.escrita-etapa {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: rgba(89, 186, 73, 1);
+    transform: scale(1.3); 
+}
